@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<div class="container">
+    <div class="page-header">
+        <h1>Register</h1>
+    </div>
+
+
+    <form name="registrationForm" class="form-horizontal" action='' method="POST">
+        <!--<div class="common-message success">Thanks for registration</div>
+        <div class="common-message error">The form has not been completed correctly</div>-->
+
+        <fieldset>
+            <div class="control-group" id="firstNameContainer">
+                <!-- Username -->
+                <label class="control-label col-sm-2" for="firstName">First name</label>
+
+                <div class="controls col-sm-10">
+                    <input type="text" name="firstName" id="firstName" placeholder="" class="form-control">
+                </div>
+            </div>
+
+            <div class="control-group" id="lastNameContainer">
+                <!-- Username -->
+                <label class="control-label col-sm-2" for="lastName">Last name</label>
+
+                <div class="controls col-sm-10">
+                    <input type="text" name="lastName" id="lastName" placeholder="" class="form-control">
+                </div>
+            </div>
+
+            <div class="control-group" id="emailContainer">
+                <!-- E-mail -->
+                <label class="control-label col-sm-2" for="email">E-mail</label>
+
+                <div class="controls col-sm-10">
+                    <input type="text" id="email" name="email" placeholder="" class="form-control">
+                </div>
+            </div>
+
+            <div class="control-group" id="passwordContainer">
+                <!-- Password-->
+                <label class="control-label col-sm-2" for="password">Password</label>
+
+                <div class="controls col-sm-10">
+                    <input type="password" id="password" name="password" placeholder="" class="form-control">
+                </div>
+            </div>
+
+            <div class="control-group" id="passwordRepeatContainer">
+                <!-- Password -->
+                <label class="control-label col-sm-2" for="passwordRepeat">Password (Confirm)</label>
+
+                <div class="controls col-sm-10">
+                    <input type="password" id="passwordRepeat" name="passwordRepeat" placeholder=""
+                           class="form-control">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <!-- Button -->
+                <div class="controls col-sm-offset-2 col-sm-10">
+                    <input type="reset" id="reset" class="btn btn-default" value="Reset"/>
+                    <input type="submit" id="submit" class="btn btn-success" value="Register"/>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
