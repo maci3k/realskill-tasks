@@ -13,12 +13,13 @@
 
 
   registrationForm.onsubmit = function () {
+    console.log(ERROR_MESSAGES.required);
     return false;
   };
 
 
   registrationForm.onreset = function () {
     return true;
-  }
+  };
 
 })();
