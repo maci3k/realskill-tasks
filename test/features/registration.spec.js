@@ -152,9 +152,13 @@ describe('Registration form', function () {
 
       it('Success dialog should be showed', function () {
         var messageElement = element(by.css('form .common-message.success'));
-
         expect(messageElement.isPresent()).toBe(true);
         expect(messageElement.getText()).toEqual(COMMON_SUCCESS_MESSAGE);
+      });
+
+      it('Success dialog should be placed before form inputs', function () {
+        var fieldsetElement = element(by.css('form .common-message.success+fieldset'));
+        expect(fieldsetElement.isPresent()).toBe(true);
       });
     });
 
@@ -211,4 +215,20 @@ describe('Registration form', function () {
 
     });
   });
+
+  describe('After reset', function () {
+    beforeAll(function () {
+      registrationForm.resetForm();
+      browser.driver.sleep(10);
+      registrationForm.submitForm();
+      browser.driver.sleep(10);
+      registrationForm.resetForm();
+      browser.driver.sleep(10);
+    });
+
+    it('Common message should be not present', function () {
+      var messageElement = element(by.css('form .common-message'));
+      expect(messageElement.isPresent()).toBeFalsy();
+    });
+  })
 });
