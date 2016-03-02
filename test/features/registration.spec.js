@@ -230,5 +230,5 @@ describe('Registration form', function () {
       var messageElement = element(by.css('form .common-message'));
       expect(messageElement.isPresent()).toBeFalsy();
     });
-  })
+  });
 });
