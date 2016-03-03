@@ -21,6 +21,15 @@ describe('Registration form', function () {
     browser.get('/index.html');
   });
 
+
+  /*describe('External libraries', function () {
+   it('JQuery shouldn\'t be use', function () {
+   browser.executeScript('$(\'body\')');
+   //TODO: check if exception is throwed
+   });
+   });*/
+
+
   describe('On startup', function () {
     it('first name should be empty', function () {
       expect(registrationForm.firstName.getValue()).toBe('');
