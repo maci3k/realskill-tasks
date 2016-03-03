@@ -22,12 +22,12 @@ describe('Registration form', function () {
   });
 
 
-  /*describe('External libraries', function () {
-   it('JQuery shouldn\'t be use', function () {
-   browser.executeScript('$(\'body\')');
-   //TODO: check if exception is throwed
-   });
-   });*/
+  describe('External libraries', function () {
+    it('JQuery shouldn\'t be use', function () {
+      var jqueryType = browser.executeScript('return (typeof jQuery)');
+      expect(jqueryType).toEqual('undefined');
+    });
+  });
 
 
   describe('On startup', function () {
