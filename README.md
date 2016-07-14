@@ -1,73 +1,39 @@
-# Registration form validation
-
-## Introduction
-This task check following skills
-* HTML DOM manipulation in pure JS
-* use of design patterns
+# Basic JavaScript Part I
 
 
 ## Exercise
+Your task is to write function that converts time in 24-hour clock to 12-hour clock
 
-### Validation rules:
-* every field is required
-* email must be valid email address
-* minimal password length is 5
-* password and password repeat must match
-
-### Validation messages:
-* field required: 'This is required'
-* invalid email: 'Passwords should match'
-* minimal password length: 'Invalid e-mail'
-* passwords match: 'Password too short'
+Your solutions should be placed inside **app/timeConversion.js** file.
 
 
-###  Acceptance criteria
-* Validation should be executed after click Submit button
-* Reset button should clear all values and removes every validation messages and classes
-* Every invalid input container ('.control-group' in parents of input) should have class '.has-error'
-* After validation, first child of form should be
+## Before you start...
 
-    ```
-    <div class="common-message success">Thanks for registration</div>
-    ```
-    if form is valid or
-    ```
-    <div class="common-message error">The form has not been completed correctly</div>
-    ```
-    if validation fails
+Informations about 24-hour clock:
 
-
-* Next sibling of invalid <input> should be:
-    ```
-    <span class="error-message">$message</span>
-    ```
-    , where $message is validation message
-
-* Please modify only app/js/main.js file
-
-Screens from  /docs folder can be useful.
+[https://en.wikipedia.org/wiki/24-hour_clock)
+    
 
 ## Setup
-You should have installed `npm`, `bower`, `grunt`  packages to run this example. First, run sequentially
 
-```
-npm install
-```
+### To install dependencies
 
-```
-bower install
-```
+    npm install
 
-To start the application, run
+### JShint
 
-```
-grunt serve
-```
+To run verify jshint:
 
-To start e2e test, run
+    grunt jshint:default
 
-```
-grunt test:e2e
-```
+### Run tests
 
-Good luck !
+To start developing unit tests
+
+    grunt test:dev
+ 
+To run tests and static analysis
+
+    npm test
+
+Good luck!
