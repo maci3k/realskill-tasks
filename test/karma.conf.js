@@ -12,7 +12,7 @@ module.exports = function (config) {
     frameworks: ['jasmine'],
 
     // list of files / patterns to load in the browser
-    files: ['app/**/*.js', 'test/unit/**/*.spec.js'],
+    files: ['app/**/*.js', 'test/unit/**/*.js'],
 
     // list of files / patterns to exclude
     exclude: [],
@@ -46,7 +46,7 @@ module.exports = function (config) {
     browsers: ['PhantomJS'],
 
     // Which plugins to enable
-    plugins: ['karma-phantomjs-launcher', 'karma-jasmine', 'karma-spec-reporter', 'karma-junit-reporter', 'karma-coverage'],
+    plugins: ['karma-phantomjs-launcher', 'karma-jasmine', 'karma-spec-reporter', 'karma-junit-reporter', 'karma-coverage', 'karma-browserify'],
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit

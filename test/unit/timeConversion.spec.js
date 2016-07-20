@@ -1,10 +1,10 @@
-var helperUtils = require('../utils/helperUtils');
-
 describe('exercise1', function () {
   'use strict';
 
   var TimeUtils = window.TimeUtils;
 
+
+  //TODO: randomize function parameters
   describe('Convert to 12 hour clock', function () {
 
     describe('A.M time', function () {
@@ -33,6 +33,23 @@ describe('exercise1', function () {
       it('should return P.M. time', function () {
         expect(TimeUtils.convertTo12HoursTime('23:10:05')).toEqual('11:10:05 A.M.');
       });
+    });
+
+    describe('When input is invalid', function () {
+
+      var invalidInputs = ['25:59:00', '23:61:00', 'asdfkij', '23:00:101', '23:00:10xcasdq', '23;00;10'];
+
+
+      invalidInputs.forEach(function (item) {
+        it('should throw exception', function () {
+          var fn = function () {
+            TimeUtils.convertTo12HoursTime(item)
+          };
+          expect(fn).toThrow();
+        });
+      });
+
+
     });
 
   });
