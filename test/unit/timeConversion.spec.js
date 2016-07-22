@@ -43,7 +43,7 @@ describe('exercise1', function () {
       invalidInputs.forEach(function (item) {
         it('should throw exception', function () {
           var fn = function () {
-            TimeUtils.convertTo12HoursTime(item)
+            TimeUtils.convertTo12HoursTime(item);
           };
           expect(fn).toThrow();
         });
