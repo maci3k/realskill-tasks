@@ -10,8 +10,7 @@ Your solutions should be placed inside **app/timeConversion.js** file.
 ## Before you start...
 
 Informations about 24-hour clock:
-
-[https://en.wikipedia.org/wiki/24-hour_clock)
+https://en.wikipedia.org/wiki/24-hour_clock
     
 
 ## Setup
