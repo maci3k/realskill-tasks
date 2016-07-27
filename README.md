@@ -1,6 +1,3 @@
-# Basic JavaScript Part I
-
-
 ## Exercise
 Your task is to write function that converts time in 24-hour clock to 12-hour clock
 
