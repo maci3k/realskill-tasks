@@ -47,6 +47,10 @@ describe('exercise1', function () {
       invalidInputs.push(helperUtils.validHours() + helperUtils.randomString(5) + ':' + helperUtils.validMinutes() + ':' + helperUtils.validSeconds());
       invalidInputs.push(helperUtils.validHours() + '::' + helperUtils.validMinutes() + ':' + helperUtils.validSeconds());
       invalidInputs.push(helperUtils.validHours() + ';' + helperUtils.validMinutes() + ';' + helperUtils.validSeconds());
+      invalidInputs.push([]);
+      invalidInputs.push(10);
+      invalidInputs.push({});
+      invalidInputs.push(null);
 
       console.log(invalidInputs);
 
