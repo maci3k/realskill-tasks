@@ -3,7 +3,7 @@
 
   window.TimeUtils = {
     convertTo12HoursTime: function (time) {
-      return '';
+      return time;
     }
   };
 })();
