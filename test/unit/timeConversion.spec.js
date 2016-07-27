@@ -37,20 +37,22 @@ describe('exercise1', function () {
       });
     });
 
-    describe('When input is invalid', function () {
+    describe('Invalid input', function () {
 
       var invalidInputs = [];
       invalidInputs.push(helperUtils.invalidHours() + ':59:00');
       invalidInputs.push('23:' + helperUtils.invalidMinutes() + ':00');
       invalidInputs.push('23:00:' + helperUtils.invalidSeconds());
       invalidInputs.push(helperUtils.randomString(12));
+      invalidInputs.push(helperUtils.validHours() + helperUtils.randomString(5) + ':' + helperUtils.validMinutes() + ':' + helperUtils.validSeconds());
+      invalidInputs.push(helperUtils.validHours() + '::' + helperUtils.validMinutes() + ':' + helperUtils.validSeconds());
       invalidInputs.push(helperUtils.validHours() + ';' + helperUtils.validMinutes() + ';' + helperUtils.validSeconds());
 
       console.log(invalidInputs);
 
 
       invalidInputs.forEach(function (item) {
-        it('should throw exception', function () {
+        it('should throw exception for input: ' + item, function () {
           var fn = function () {
             TimeUtils.convertTo12HoursTime(item);
           };

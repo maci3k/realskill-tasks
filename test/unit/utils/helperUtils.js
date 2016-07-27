@@ -6,7 +6,7 @@
     var sNumber = '' + number;
     length -= sNumber.length;
     while (length-- > 0) {
-      sNumber = '0' + sNumber
+      sNumber = '0' + sNumber;
     }
     return sNumber;
   }
